@@ -1,0 +1,291 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\coeff}[2]{[x^{#1}]\,#2}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\title{Proof of Hanna's square-exponent factorial integrality conjectures}
+\author{Haobo Ma\textsuperscript{1}\qquad Wenlin Zhang\textsuperscript{2,1}\\[3pt]
+  \small\textsuperscript{1}ChronoAI Pte Ltd, Singapore\\
+  \small\textsuperscript{2}National University of Singapore}
+\date{November 17, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+In the COMMENT sections of OEIS A350410 and A350411 (revision 5) and
+A350412 (revision 9), Paul D. Hanna conjectured that the three sequences
+consist entirely of integers; we prove all three conjectures.
+Their factorial denominators cancel by a coefficient-divisibility identity.
+For each series we also establish existence and uniqueness over the rationals.
+More generally, a degree-dependent cutoff $M_n\geq1$ gives the same conclusions
+whenever $\gcd(n,M_n^2)$ divides $M_n$, with any prescribed integer linear
+coefficient. This arithmetic condition is necessary and sufficient for
+the last denominator to cancel for every integer polynomial, and the
+solutions depend homogeneously on the prescribed linear coefficient.
+All defining sums are finite sums of formal power series.
+\end{abstract}
+
+\section{The conjectures and a common theorem}
+Hanna's three entries \cite{hanna410,hanna411,hanna412} each state:
+``This sequence is conjectured to consist entirely of integers.'' We prove all three
+assertions. Their defining equations determine a new coefficient using a finite
+factorial-weighted sum of square powers; the issue is why that rational
+recursion always produces an integer. The decisive cancellation is a
+divisibility property of the last summand.
+
+For a formal power series $F\in\Q[[x]]$, write $[x^n]F$ for its coefficient of
+$x^n$. For an integer $M\geq1$, define the finite sum
+\[
+ S_M(F)=\sum_{m=0}^{M}\frac{F^{m^2}}{m!}.
+\]
+The term with $m=0$ is $1$, including when $F=0$.
+The examples in A350410 and A350411 specify the initial terms $-1+x$.
+Their NAME equations are, respectively,
+\begin{equation}\label{eq:two}
+ [x^n]S_n(B)=0,\qquad [x^n]S_{n+1}(B)=0\qquad(n\geq2).
+\end{equation}
+The series $A$ in A350412 starts with $x$ and satisfies
+\begin{equation}\label{eq:third}
+ A(0)=0,\quad [x]A=1,\quad [x^n]S_{2n}(A-1)=0\qquad(n\geq2).
+\end{equation}
+Thus $B=A-1$ has the same normalization as the first two series.
+The prescribed linear coefficient matters: these equations impose no condition
+in degree one.
+
+\begin{theorem}\label{thm:main}
+Let $(M_n)_{n\geq2}$ be any sequence of positive integers, and let $t\in\Q$.
+There is a unique series
+\[
+ B=-1+tx+\sum_{n\geq2}b_nx^n\in\Q[[x]]
+ \quad\text{such that}\quad [x^n]S_{M_n}(B)=0\quad(n\geq2).
+\]
+If $t\in\Z$ and
+\begin{equation}\label{eq:criterion}
+ \gcd(n,M_n^2)\mid M_n\qquad(n\geq2),
+\end{equation}
+then $B\in\Z[[x]]$.
+\end{theorem}
+
+\section{Cancellation of the factorial denominator}
+We first compute the coefficient multiplying the unknown $b_n$.
+If $P$ has constant term $-1$ and degree less than $n$, then for every
+integer $r\geq1$ and every $u\in\Q$,
+\[
+ [x^n](P+ux^n)^r=[x^n]P^r+r(-1)^{r-1}u.
+\]
+Indeed, terms containing two factors $ux^n$ have degree at least $2n>n$,
+and the remaining $r-1$ factors in the linear term contribute their constants.
+Consequently
+\begin{equation}\label{eq:slope}
+ [x^n]S_M(P+ux^n)=[x^n]S_M(P)+\lambda_M u,
+ \qquad
+ \lambda_M=\sum_{m=1}^{M}\frac{(-1)^{m-1}m^2}{m!}
+          =\frac{(-1)^{M-1}}{(M-1)!}.
+\end{equation}
+Here $m^2$ and $m$ have the same parity. To obtain the last equality, put
+$h_0=0$ and $h_m=(-1)^{m-1}/(m-1)!$ for $m\geq1$.
+For $m=1$ the summand is $h_1-h_0=1$; for $m\geq2$ it is
+\[
+ \frac{(-1)^{m-1}m}{(m-1)!}
+ =\frac{(-1)^{m-1}}{(m-1)!}
+  -\frac{(-1)^{m-2}}{(m-2)!}=h_m-h_{m-1}.
+\]
+The sum therefore telescopes. In particular, $\lambda_M\ne0$.
+
+\begin{lemma}\label{lem:div}
+For $P\in\Z[[x]]$, $n\geq1$ and $r\geq1$,
+\[
+ \frac{r}{\gcd(n,r)}\ \bigm|\ [x^n]P^r.
+\]
+In particular, if $M\geq1$ and $\gcd(n,M^2)\mid M$, then
+$M\mid[x^n]P^{M^2}$.
+\end{lemma}
+For nonnegative coefficients, the divisibility statement is Eger's
+Theorem~19 \cite{eger}. Reducing coefficients modulo $r/\gcd(n,r)$ gives
+the signed version; the following direct proof covers both.
+\begin{proof}
+Formal differentiation gives
+\[
+ n[x^n]P^r=[x^{n-1}](P^r)'=r[x^{n-1}]P'P^{r-1}.
+\]
+Thus $r$ divides $n[x^n]P^r$. Dividing $n$ and $r$ by their greatest common
+divisor and applying coprimality gives the first assertion.
+For the second, set $r=M^2$ and $d=\gcd(n,M^2)$. If $d\mid M$, then
+$M^2/d=M(M/d)$ is a multiple of $M$, so the first assertion applies.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Set $b_0=-1$ and $b_1=t$. Suppose $b_0,\ldots,b_{n-1}$ are known, where
+$n\geq2$, and put $P_n=\sum_{j=0}^{n-1}b_jx^j$ and $M=M_n$.
+Equation~\eqref{eq:slope} forces precisely the value
+\begin{equation}\label{eq:recursion}
+ b_n=(-1)^M(M-1)!\,[x^n]S_M(P_n).
+\end{equation}
+This defines one rational coefficient at each step. Higher coefficients cannot
+affect a coefficient of degree $n$, so the resulting formal series satisfies
+every required equation. The same formula forces the coefficients of any other
+solution one by one, proving uniqueness.
+
+Now assume $t\in\Z$ and \eqref{eq:criterion}, and argue by induction that
+$P_n\in\Z[x]$. Multiplying the right-hand coefficient by $(M-1)!$ gives
+\begin{equation}\label{eq:clear}
+ (M-1)!\,[x^n]S_M(P_n)
+ =\sum_{m=0}^{M-1}\frac{(M-1)!}{m!}[x^n]P_n^{m^2}
+   +\frac{[x^n]P_n^{M^2}}{M}.
+\end{equation}
+Every factorial ratio in the sum is an integer, and the final quotient is an
+integer by Lemma~\ref{lem:div}. Formula~\eqref{eq:recursion} therefore gives
+$b_n\in\Z$, completing the induction. This also covers $M=1$: the sum in
+\eqref{eq:clear} has only its $m=0$ term, and the final divisor is $1$.
+\end{proof}
+
+\begin{corollary}\label{cor:hanna}
+Each of the three normalized series in
+\eqref{eq:two}--\eqref{eq:third} exists, is unique over $\Q$, and has only
+integer coefficients.
+More generally, the integrality conclusion holds if, independently in each
+degree $n$, the cutoff $M_n$ is any positive multiple of $n$, or is coprime
+to $n$, and the linear coefficient is any integer.
+\end{corollary}
+\begin{proof}
+If $M=kn$ with $k\geq1$, then $\gcd(n,M^2)=n\mid M$.
+If $\gcd(n,M)=1$, then $\gcd(n,M^2)=1\mid M$.
+These facts apply to $M_n=n$, $n+1$ and $2n$.
+Take $t=1$ in Theorem~\ref{thm:main}; for the third series translate $B$ to
+$A=B+1$, which preserves all positive-degree coefficients and changes the
+constant term to zero.
+\end{proof}
+
+\section{Scaling and sharpness of the cancellation condition}
+\begin{corollary}\label{cor:scaling}
+Fix any positive cutoff sequence $(M_n)_{n\geq2}$, and let $B_t$ be the
+unique solution in Theorem~\ref{thm:main} with linear coefficient $t\in\Q$.
+Then $B_t(x)=B_1(tx)$. In particular,
+$[x^n]B_t=t^n[x^n]B_1$ for every $n\geq0$.
+If the gcd condition holds, every coefficient is an integer multiple of
+$t^n$ whenever $t\in\Z$.
+\end{corollary}
+\begin{proof}
+Substitution $x\mapsto tx$ multiplies each degree-$n$ coefficient of
+$S_{M_n}(B_1)$ by $t^n$, preserving its vanishing for $n\geq2$.
+It gives the required constant and linear coefficients, so uniqueness
+identifies it with $B_t$. This also applies to $t=0$.
+\end{proof}
+
+\begin{theorem}\label{thm:sharp}
+For positive integers $n,M$, the following are equivalent:
+\begin{enumerate}
+\item $\gcd(n,M^2)\mid M$;
+\item for every $P\in\Z[x]$ with $P(0)=-1$, one has
+$M\mid[x^n]P^{M^2}$.
+\end{enumerate}
+Equivalently, for every prime $p\mid M$, the exponent of $p$ in $n$
+is at most its exponent in $M$.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:div} proves the forward implication.
+Write $v_p(a)$ for the exponent of a prime $p$ in a positive integer $a$,
+extended to nonzero rationals by subtraction of numerator and denominator
+exponents. If (1) fails, some $p\mid M$ has
+$e=v_p(M)\geq1$ and $v_p(n)\geq e+1$.
+Set $N=M^2$, $k=p^{e+1}$, $s=n/k$ and $P=-1+x^s$.
+Then $s$ is a positive integer and $k\leq p^{2e}\leq N$, while
+\[
+ [x^n]P^N=(-1)^{N-k}\binom Nk,
+ \qquad \binom Nk=\frac Nk\binom{N-1}{k-1}.
+\]
+For $1\leq i<k$, one has $v_p(i)\leq e<2e=v_p(N)$, whence
+$v_p(N-i)=v_p(i)$. The product
+$\binom{N-1}{k-1}=\prod_{i=1}^{k-1}(N-i)/i$ therefore has valuation zero.
+It follows that $v_p\binom Nk=2e-(e+1)=e-1$; hence $M$ does not divide
+the displayed coefficient. This proves the converse.
+Finally, $v_p(\gcd(n,M^2))=\min(v_p(n),2v_p(M))$ gives the stated
+prime-by-prime equivalence.
+\end{proof}
+
+Theorem~\ref{thm:sharp} concerns cancellation for every integer polynomial;
+it does not assert necessity for a particular recursively generated series.
+The unrestricted positive-cutoff extension of integrality is not asserted
+in Hanna's entries and fails: for the constant cutoff $M_n=2$ and $t=1$,
+the unique rational solution begins
+\[
+ B=-1+x+3x^2+16x^3+\frac{211}{2}x^4+\cdots.
+\]
+Indeed, $S_2(B)=1+B+B^4/2$; successively setting its coefficients of
+$x^2,x^3,x^4$ to zero gives $b_2=3$, $b_3=16$, and
+$-b_4+(12\cdot16+6\cdot3^2-12\cdot3+1)/2=0$.
+
+\section{Source coverage and verification}
+The following table covers all the conjectures and cross-references in these
+three entries. Each COMMENT contains the same integrality conjecture, and each
+cross-reference points to the other two entries.
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.21\linewidth}>{\raggedright\arraybackslash}p{.29\linewidth}>{\raggedright\arraybackslash}p{.41\linewidth}@{}}
+\toprule
+Source item & Normalization and cutoff & Coverage\\
+\midrule
+A350410, rev.\ 5, COMMENT & $B=-1+x+\cdots$, $M_n=n$ & Proved: integrality; existence and uniqueness included.\\[3pt]
+A350411, rev.\ 5, COMMENT & $B=-1+x+\cdots$, $M_n=n+1$ & Proved: integrality; existence and uniqueness included.\\[3pt]
+A350412, rev.\ 9, COMMENT & $B=A-1=-1+x+\cdots$, $M_n=2n$ & Proved: integrality; existence and uniqueness included.\\[3pt]
+EXAMPLE and PROGRAM sections & Finite coefficient data and recursions & Recursion~\eqref{eq:recursion} explains the formulas; coefficient data admit exact finite checks.\\[3pt]
+A350412, keyword \texttt{nonn} & Nonnegative terms & Nonnegativity beyond the checked prefix is not covered.\\[3pt]
+General gcd criterion and scaling & Theorem~\ref{thm:main}, Corollary~\ref{cor:scaling} & Not posed; proved for all degrees.\\[3pt]
+Universal cancellation & Theorem~\ref{thm:sharp} & Not posed; exact arithmetic criterion proved.\\[3pt]
+Every positive cutoff & $M_n=2$ & Not asserted in the source; fails at $b_4=211/2$.\\
+\bottomrule
+\end{tabular}
+\end{center}
+In the pinned \href{https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean}{Lean source},
+in namespace \texttt{D5.S1.Recurrence.Algebraic}, the declaration
+\texttt{HannaSquareExponentIntegrality.result} proves existence,
+uniqueness and integrality for exactly these three normalized rational series.
+Its source predicates are \texttt{isSourceA350410} for cutoff $n$,
+\texttt{isSourceA350411} for $n+1$, and \texttt{isSourceA350412} for $2n$,
+with $A=B+1$ in the third case.
+The same file's private \texttt{all\_for\_cutoff} theorem also covers
+degree-by-degree mixtures of $n$, $n+1$ and $2n$, with linear coefficient $1$.
+The general greatest-common-divisor criterion, arbitrary rational linear
+coefficient, scaling and sharpness are established by the written proofs here.
+The accompanying \texttt{verify.py} computes both the rational coefficient
+recursion and its integer cancellation formula, compares the listed OEIS terms,
+and checks the defining equations through degree $16$ using exact arithmetic.
+It also matches all 173 displayed power-table coefficients, checks scaling
+through degree $10$, and checks the sharpness witnesses for
+$1\leq n\leq48$, $1\leq M\leq32$.
+These finite checks illustrate the identities; the theorem holds in all degrees
+by the induction above.
+
+\begingroup\small
+\begin{thebibliography}{9}
+\bibitem{hanna410} P. D. Hanna,
+\emph{A350410}, The On-Line Encyclopedia of Integer Sequences,
+December 29, 2021; revision 5, December 30, 2021.
+NAME, COMMENT, EXAMPLE and PROGRAM.
+\url{https://oeis.org/history?seq=A350410}.
+\bibitem{hanna411} P. D. Hanna,
+\emph{A350411}, The On-Line Encyclopedia of Integer Sequences,
+December 29, 2021; revision 5, December 30, 2021.
+NAME, COMMENT, EXAMPLE and PROGRAM.
+\url{https://oeis.org/history?seq=A350411}.
+\bibitem{hanna412} P. D. Hanna,
+\emph{A350412}, The On-Line Encyclopedia of Integer Sequences,
+December 29, 2021; revision 9, December 30, 2021.
+NAME, COMMENT, EXAMPLE and PROGRAM.
+\url{https://oeis.org/history?seq=A350412}.
+\bibitem{eger} S. Eger,
+\emph{Some Elementary Congruences for the Number of Weighted Integer
+Compositions}, Journal of Integer Sequences \textbf{18} (2015),
+Article 15.4.1, equation (1) and Theorem 19.
+\url{https://cs.uwaterloo.ca/journals/JIS/VOL18/Eger/eger11.pdf}.
+\end{thebibliography}
+\endgroup
+\smallskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under CC BY 4.0.
+\end{document}

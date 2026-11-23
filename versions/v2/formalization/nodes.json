@@ -1,0 +1,209 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:hanna-square-exponent-integrality:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean"
+      },
+      "lineage": "collected:hanna-square-exponent-integrality:s1",
+      "macros": {
+        "\\Q": "\\mathbb{Q}",
+        "\\Z": "\\mathbb{Z}",
+        "\\coeff": "[x^{#1}]\\,#2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-square-exponent-integrality",
+      "scope": "in_scope",
+      "statement": "Let $(M_n)_{n\\geq2}$ be any sequence of positive integers, and let $t\\in\\Q$.\nThere is a unique series\n\\[\n B=-1+tx+\\sum_{n\\geq2}b_nx^n\\in\\Q[[x]]\n \\quad\\text{such that}\\quad [x^n]S_{M_n}(B)=0\\quad(n\\geq2).\n\\]\nIf $t\\in\\Z$ and\n\\begin{equation}\n \\gcd(n,M_n^2)\\mid M_n\\qquad(n\\geq2),\n\\end{equation}\nthen $B\\in\\Z[[x]]$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's square-exponent factorial integrality conjectures",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-square-exponent-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:hanna-square-exponent-integrality:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean"
+      },
+      "lineage": "collected:hanna-square-exponent-integrality:s2",
+      "macros": {
+        "\\Q": "\\mathbb{Q}",
+        "\\Z": "\\mathbb{Z}",
+        "\\coeff": "[x^{#1}]\\,#2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-square-exponent-integrality",
+      "scope": "in_scope",
+      "statement": "For $P\\in\\Z[[x]]$, $n\\geq1$ and $r\\geq1$,\n\\[\n \\frac{r}{\\gcd(n,r)}\\ \\bigm|\\ [x^n]P^r.\n\\]\nIn particular, if $M\\geq1$ and $\\gcd(n,M^2)\\mid M$, then\n$M\\mid[x^n]P^{M^2}$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's square-exponent factorial integrality conjectures",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-square-exponent-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:hanna-square-exponent-integrality:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean"
+      },
+      "lineage": "collected:hanna-square-exponent-integrality:s3",
+      "macros": {
+        "\\Q": "\\mathbb{Q}",
+        "\\Z": "\\mathbb{Z}",
+        "\\coeff": "[x^{#1}]\\,#2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-square-exponent-integrality",
+      "scope": "in_scope",
+      "statement": "Each of the three normalized series in\n\\eqref{eq:two}--\\eqref{eq:third} exists, is unique over $\\Q$, and has only\ninteger coefficients.\nMore generally, the integrality conclusion holds if, independently in each\ndegree $n$, the cutoff $M_n$ is any positive multiple of $n$, or is coprime\nto $n$, and the linear coefficient is any integer.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's square-exponent factorial integrality conjectures",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-square-exponent-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:hanna-square-exponent-integrality:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean"
+      },
+      "lineage": "collected:hanna-square-exponent-integrality:s4",
+      "macros": {
+        "\\Q": "\\mathbb{Q}",
+        "\\Z": "\\mathbb{Z}",
+        "\\coeff": "[x^{#1}]\\,#2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-square-exponent-integrality",
+      "scope": "in_scope",
+      "statement": "Fix any positive cutoff sequence $(M_n)_{n\\geq2}$, and let $B_t$ be the\nunique solution in Theorem~\\ref{thm:main} with linear coefficient $t\\in\\Q$.\nThen $B_t(x)=B_1(tx)$. In particular,\n$[x^n]B_t=t^n[x^n]B_1$ for every $n\\geq0$.\nIf the gcd condition holds, every coefficient is an integer multiple of\n$t^n$ whenever $t\\in\\Z$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's square-exponent factorial integrality conjectures",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-square-exponent-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:hanna-square-exponent-integrality:2:s5",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean"
+      },
+      "lineage": "collected:hanna-square-exponent-integrality:s5",
+      "macros": {
+        "\\Q": "\\mathbb{Q}",
+        "\\Z": "\\mathbb{Z}",
+        "\\coeff": "[x^{#1}]\\,#2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-square-exponent-integrality",
+      "scope": "in_scope",
+      "statement": "For positive integers $n,M$, the following are equivalent:\n\\begin{enumerate}\n\\item $\\gcd(n,M^2)\\mid M$;\n\\item for every $P\\in\\Z[x]$ with $P(0)=-1$, one has\n$M\\mid[x^n]P^{M^2}$.\n\\end{enumerate}\nEquivalently, for every prime $p\\mid M$, the exponent of $p$ in $n$\nis at most its exponent in $M$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's square-exponent factorial integrality conjectures",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-square-exponent-integrality"
+    }
+  ]
+}

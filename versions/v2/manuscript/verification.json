@@ -1,0 +1,250 @@
+{
+  "A350412_positive_coefficients_checked": [
+    1,
+    16
+  ],
+  "additional_cutoffs": [
+    "triple_degree",
+    "coprime",
+    "mixed",
+    "smallest_admissible_at_least_four"
+  ],
+  "additional_degree_range": [
+    2,
+    12
+  ],
+  "additional_equations_checked": 176,
+  "additional_linear_coefficients": [
+    -2,
+    0,
+    1,
+    3
+  ],
+  "arithmetic": "Exact Python integers and fractions.Fraction; no numerical rounding.",
+  "constant_cutoff_two_coefficients_through_degree_four": [
+    "-1",
+    "1",
+    "3",
+    "16",
+    "211/2"
+  ],
+  "construction_agreement": "Rational binomial expansion agrees with integer binary-power cancellation.",
+  "defining_equations_checked": 45,
+  "defining_equations_degree_range": [
+    2,
+    16
+  ],
+  "divisibility_checks": 1800,
+  "divisibility_degree_range": [
+    1,
+    12
+  ],
+  "divisibility_exponent_range": [
+    1,
+    30
+  ],
+  "divisibility_samples": [
+    [
+      -1,
+      1,
+      2,
+      -3
+    ],
+    [
+      2,
+      -3,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      -1,
+      2
+    ],
+    [
+      1
+    ],
+    [
+      -1,
+      0,
+      5
+    ]
+  ],
+  "last_term_checks": 1305,
+  "last_term_cutoff_range": [
+    1,
+    24
+  ],
+  "listed_oeis_terms_matched": 40,
+  "primewise_criterion_pairs_checked": 1536,
+  "scaling_coefficients_checked": 220,
+  "scaling_cutoffs": [
+    "A350410",
+    "A350411",
+    "A350412",
+    "mixed"
+  ],
+  "scaling_degree_range": [
+    0,
+    10
+  ],
+  "scaling_linear_coefficients": [
+    "-2",
+    "0",
+    "3",
+    "1/2",
+    "-2/3"
+  ],
+  "scope": "Finite exact calculations; existence, uniqueness, integrality, scaling and universal cancellation follow in all degrees from the written proofs in note.tex.",
+  "series": {
+    "A350410": [
+      -1,
+      1,
+      3,
+      12,
+      116,
+      -534,
+      -19083,
+      4653416,
+      8687989872,
+      -128647855586426,
+      -17178731504646708274,
+      22932060477876906089601744,
+      336748983792218322012229442319058,
+      -59340140012235302782558826850918965528904,
+      -135935979554634873389993183019614435570206186506348,
+      4359616519227623971178976912185258573259921937219097427608884,
+      2097265529499524176231707183809926510079163595432350777929680079557205977
+    ],
+    "A350411": [
+      -1,
+      1,
+      6,
+      76,
+      74,
+      26058,
+      -7794632,
+      -14388774920,
+      213380711849598,
+      28487519401892735386,
+      -38029127603565193657832846,
+      -558442679082054075230555562505128,
+      98405860538000983882824515617294391388622,
+      225427456282611271896161167867656072505435638401710,
+      -7229706710497321117548201314568887077507221151724554967586888,
+      -3477969817764013821101568268484148924091503278518776802647354911890726304,
+      26770157152510804944333317922465513967319602826204363681091139237246998679982470311518
+    ],
+    "A350412": [
+      0,
+      1,
+      12,
+      830,
+      1867901,
+      251714851830,
+      3696867014099083814,
+      8468768030682252554158546818,
+      4074040763513889480730186336041282515610,
+      533088609878310228401628064629048305794583364205468626,
+      23856105278172150534783174192628043609641782797360374708050534816035626,
+      448382828612088345295417655353849922022905813076665007433753467405068389074388214649132834,
+      4264311474016442451246231173714665888778504584817819961772965707898872822542884292856635299967839081539345291146,
+      24333249875400830075449941907996227869009070056730754920867597443515343153156229793226886587426487941643325451085395996628082582650503450,
+      97473918422892585717997293225034523411885403739803847639732303376229828423731423026127725468050261899366455706716312974934304003015499449164073592449703984373267050,
+      317053654359666287005009352699622591354233693610922057888588192207957744267366664988408629702443496455310646915691938737178527792701123900967581484316429755765360564296749804013501779812088336530,
+      959091517745585374741992996274255124364796033129217350441318263887164640938650980303396284609125325137423447708515730093280426778842556613573474044074828328857817621066522657879396793698732916475177766801536881819957628750924787
+    ]
+  },
+  "series_degree_range": [
+    0,
+    16
+  ],
+  "sharpness_cutoff_range": [
+    1,
+    32
+  ],
+  "sharpness_degree_range": [
+    1,
+    48
+  ],
+  "sharpness_witness_examples": [
+    {
+      "coefficient": 1,
+      "cutoff": 2,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    },
+    {
+      "coefficient": 58905,
+      "cutoff": 6,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    },
+    {
+      "coefficient": 3921225,
+      "cutoff": 10,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    },
+    {
+      "coefficient": 59626385,
+      "cutoff": 14,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    },
+    {
+      "coefficient": 450710001,
+      "cutoff": 18,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    },
+    {
+      "coefficient": 2258257001,
+      "cutoff": 22,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    },
+    {
+      "coefficient": 8624108025,
+      "cutoff": 26,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    },
+    {
+      "coefficient": 27155621025,
+      "cutoff": 30,
+      "degree": 4,
+      "polynomial_monomial_degree": 1,
+      "prime": 2
+    }
+  ],
+  "sharpness_witnesses_checked": 167,
+  "slope_cutoff_range": [
+    1,
+    64
+  ],
+  "slope_identities_checked": 64,
+  "source_example_coefficients_matched": 173,
+  "sources": {
+    "A350410": {
+      "offset": 0,
+      "revision": 5
+    },
+    "A350411": {
+      "offset": 0,
+      "revision": 5
+    },
+    "A350412": {
+      "offset": 1,
+      "revision": 9
+    }
+  }
+}

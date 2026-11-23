@@ -1,0 +1,15 @@
+{
+  "id": "hanna-square-exponent-integrality",
+  "revision": 2,
+  "problem_ids": ["op-hanna350410"],
+  "topic": "Hanna's three square-exponent factorial integrality conjectures",
+  "title": "Proof of Hanna's square-exponent factorial integrality conjectures",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "In the COMMENT sections of OEIS A350410 and A350411 (revision 5) and A350412 (revision 9), Paul D. Hanna conjectured that the three sequences consist entirely of integers; we prove all three conjectures. Their factorial denominators cancel by a coefficient-divisibility identity. For each series we also establish existence and uniqueness over the rationals. More generally, a degree-dependent cutoff M_n >= 1 gives the same conclusions whenever gcd(n,M_n^2) divides M_n, with any prescribed integer linear coefficient. This arithmetic condition is necessary and sufficient for the last denominator to cancel for every integer polynomial, and the solutions depend homogeneously on the prescribed linear coefficient. All defining sums are finite sums of formal power series.",
+  "summary": "Existence, uniqueness and integrality for Hanna's three factorial-weighted square-power series; homogeneous rational scaling and a sharp arithmetic criterion for universal denominator cancellation.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean"
+}
