@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24484627",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24484628",
     "lean_source": {
       "revision": "d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f",
       "url": "https://github.com/the-omega-institute/trureturing/blob/d75bdd6e258ca112f6f8d8ddce3c6a962cc2049f/D5/S1/Recurrence/Algebraic/HannaSquareExponentIntegrality.lean"

@@ -5,13 +5,15 @@
 In the COMMENT sections of OEIS A350410 and A350411 (revision 5) and A350412 (revision 9), Paul D. Hanna conjectured that the three sequences consist entirely of integers; we prove all three conjectures. Their factorial denominators cancel by a coefficient-divisibility identity. For each series we also establish existence and uniqueness over the rationals. More generally, a degree-dependent cutoff M_n >= 1 gives the same conclusions whenever gcd(n,M_n^2) divides M_n, with any prescribed integer linear coefficient. This arithmetic condition is necessary and sufficient for the last denominator to cancel for every integer polynomial, and the solutions depend homogeneously on the prescribed linear coefficient. All defining sums are finite sums of formal power series.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24484628](https://doi.org/10.5281/zenodo.24484628)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24484627](https://doi.org/10.5281/zenodo.24484627)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [hanna-square-exponent-integrality](https://mathesis-omega-research.apps.chrono-ai.fun/papers/hanna-square-exponent-integrality?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Proof of Hanna's square-exponent factorial integrality conjectures. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/hanna-square-exponent-integrality?version=2
+Haobo Ma, Wenlin Zhang (2026). Proof of Hanna's square-exponent factorial integrality conjectures. Mathesis, version 2. https://doi.org/10.5281/zenodo.24484628
 
 ## Statement progress
 
